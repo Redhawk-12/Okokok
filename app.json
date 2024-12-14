@@ -1,0 +1,77 @@
+{
+    "name": "HAWK X MUSIC",
+    "description": "Cutex Music Is A Pyrogram Based Telegram VC streaming Bot",
+    "logo": "https://graph.org/file/a67fff9616df74f2753c1.jpg",
+    "keywords": [
+        "python3",
+        "telegram",
+        "bot",
+        "CUTE",
+        "CUTEXMUSIC",
+        "cutexmusicbot",
+        "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": "25565263",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": "2ead39886be0c1fd87a43ad4d27383f3",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "A Bot's token from @Botfather on Telegram",
+            "value": "7104902055:AAFaFXnNztLTRD60HDTxQvcOMk_jx_EXKPc",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "The user ID(s) of user(s) whom you would like to add as an OWNER. Multiple values shall be separated with a space.",
+            "value": "5269893269",
+            "required": true
+        },
+        "MONGO_DB_URI": {
+            "description": "Mongo DB URL",
+            "value": "mongodb+srv://Redhawk12:REDHAWK12@cluster0.rkxgbgc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+            "required": true
+        },
+        "STRING_SESSION": {
+            "description": "A Pyrogram Session. Get It From Here @Shalini_string_Bot.",
+            "value": "BQGGGE8ApBF1HBqL--SbBdkCXMpUIdg4enro6wDkc_SBsKKOdnFAI3on5xjQ_aCPpnj5LpiR4uRvjBnCUPb7m5j4Xb8Cdl7FzrhQDGk8LJyvL-2f8RfAoCss85330WL4DEQlQ1QE1bVEvwsqeR2ha_ELIW5ieiyo0Nt6d6gEr8UJzGNt98MR2boiDLRKDnFwAWHWoQRE4aKQOabiXduGAhh_Q9EgbYN21oSr4pq5NKDWX2KUJjGaNmsPpniDkzNDC_hKPzMVGBnEGIqTCwSS55ga0xROX7DLBtVMSN9AiTjvOgLDGz5xWYmhZgbIX1Wbrse6AkPmj4UeTgp47MNfQzf25WvKMQAAAAHMipVwAA",
+            "required": true
+        },
+        "HEROKU_API_KEY": {
+            "description": "Your Heroku account's API key",
+            "value": "",
+            "required": false
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Your Heroku app name",
+            "value": "",
+            "required": false
+        },
+        "LOG_GROUP_ID": {
+            "description": "Your Log Group ID. Add your bot and promote as an admin with full rights! Use only Group. Please don't use Channel ID.",
+            "value": "-1001889941945",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
+
